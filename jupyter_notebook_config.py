@@ -10,5 +10,5 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.allow_remote_access = True
 c.NotebookApp.trust_xheaders = True
 c.NotebookApp.ip = '0.0.0.0'
-c.ServerApp.base_url = os.gerenv('NOTEBOOK_BASE_URL', '/')
-c.NotebookApp.default_url = os.gerenv('NOTEBOOK_BASE_URL', '/')
+c.ServerApp.base_url = os.getenv('NOTEBOOK_BASE_URL', '/')
+c.NotebookApp.default_url = os.getenv('NOTEBOOK_BASE_URL', '/')
