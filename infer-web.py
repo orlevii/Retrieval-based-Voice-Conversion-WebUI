@@ -1604,6 +1604,7 @@ with gr.Blocks(title="RVC WebUI") as app:
         app.queue(max_size=1022).launch(
             max_threads=511,
             server_name="0.0.0.0",
+            root_path=os.getenv("GRADIO_ROOT_PATH", "/"),
             inbrowser=not config.noautoopen,
             server_port=config.listen_port,
             quiet=True,
